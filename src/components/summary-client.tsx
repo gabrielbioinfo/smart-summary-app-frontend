@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { API_BASE_URL } from "@/config";
+import { API_URL } from "@/config";
 import { useState } from "react";
 
 export function SummaryClient() {
@@ -18,7 +18,7 @@ export function SummaryClient() {
     setSummary("");
     setLoading(true);
     try {
-  const response = await fetch(`${API_BASE_URL}/v1/summarize`, {
+  const response = await fetch(`${API_URL}/v1/summarize`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
